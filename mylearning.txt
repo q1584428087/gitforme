@@ -11,12 +11,20 @@ git学习笔记
 10.git init					初始化目录使之成为git 管理的仓库
 11.git diff					查看修改内容
 12.git reset --hard ___a__	回退到a对应的版本 若为 HEAD 则^代表回退一个版本  ~d代表回退d个版本
-13.
-14.
-15.
-16.
+13.rm _______				从工作区删除文件
+14.git rm _______			从工作区和暂存区删除文件
+15.git checkout -- _____	用版本区的文件替换工作区的文件
+16.git restore _____		取消工作区的修改
 17.
 18.
 19.
 20.
 21.
+建立远程库
+1.创立SSH KEY 
+ssh-keygen -t rsa -C "youremail@example.com"
+2.登录github -> 打开settings -> 打开SSH Keys -> 在文本框中粘贴id_rsa.pub文件的内容
+3.建立仓库repository
+4.根据提示输入git remote add origin git@github.com:michaelliao/learngit.git类似的命令
+5.git push -u origin master  第一次推送
+6.git push origin master 之后的推送
