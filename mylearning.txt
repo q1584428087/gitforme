@@ -26,9 +26,9 @@ git学习笔记
 24.git log --graph			查看近几个分支合并情况
 25.git stash 				存储当前工作区然后清空
 //git stash list			查看存储列表
-//git stash apply			恢复存储内容但是临时内容不删除
-//git stash drop			删除临时内容
-//git stash pop				恢复的同时删除临时内容
+//git stash apply			恢复存储内容但是stash内容不删除
+//git stash drop			删除stash内容
+//git stash pop				恢复的同时删除stash内容
 
 
 建立远程库
