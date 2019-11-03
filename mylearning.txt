@@ -24,11 +24,14 @@ git学习笔记
 22.git switch -c ____		创建并切换至分支
 23.git log --graph --pretty=oneline --abbrev-commit		查看所有分支合并情况
 24.git log --graph			查看近几个分支合并情况
+<<<<<<< HEAD
 25.git stash 				存储当前工作区然后清空
 //git stash list			查看存储列表
 //git stash apply			恢复存储内容但是stash内容不删除
 //git stash drop			删除stash内容
 //git stash pop				恢复的同时删除stash内容
+=======
+>>>>>>> dev
 
 
 建立远程库
