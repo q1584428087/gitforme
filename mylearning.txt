@@ -15,11 +15,17 @@ git学习笔记
 14.git rm _______			从工作区和暂存区删除文件
 15.git checkout -- _____	用版本区的文件替换工作区的文件
 16.git restore _____		取消工作区的修改
-17.
-18.
-19.
-20.
-21.
+17.git checkout -b ____		创建分支并切换到该分支
+18.git branch ___			创建分支 若不输入分支则代表查看所有分支，*代表当前分支
+19.git checkout ___			切换到分支
+20.git merge ____			合并指定分支到当前分支
+//git merge --no-ff -m "__" __ 使用普通合并
+21.git branch -d ____		删除该分支
+22.git switch -c ____		创建并切换至分支
+23.git log --graph --pretty=oneline --abbrev-commit		查看所有分支合并情况
+24.git log --graph			查看近几个分支合并情况
+
+
 建立远程库
 1.创立SSH KEY 
 ssh-keygen -t rsa -C "youremail@example.com"
@@ -28,3 +34,5 @@ ssh-keygen -t rsa -C "youremail@example.com"
 4.根据提示输入git remote add origin git@github.com:michaelliao/learngit.git类似的命令
 5.git push -u origin master  第一次推送
 6.git push origin master 之后的推送
+
+克隆远程库
