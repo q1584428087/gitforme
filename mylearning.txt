@@ -21,6 +21,7 @@ git学习笔记
 20.git merge ____			合并指定分支到当前分支
 //git merge --no-ff -m "__" __ 使用普通合并
 21.git branch -d ____		删除该分支
+//改为-D 则强行删除	可用于丢弃一个没有被合并过的分支
 22.git switch -c ____		创建并切换至分支
 23.git log --graph --pretty=oneline --abbrev-commit		查看所有分支合并情况
 24.git log --graph			查看近几个分支合并情况
@@ -29,8 +30,12 @@ git学习笔记
 //git stash apply			恢复存储内容但是stash内容不删除
 //git stash drop			删除stash内容
 //git stash pop				恢复的同时删除stash内容
-
-
+26.git cherry-pick _____	复制特定的提交到当前分支
+27.git remote				查看远程库的信息
+//git remote -v 			查看更为详细的信息
+28.git pull 				抓取远程的新提交
+29.git checkout -b branch-name origin/branch-name	本地创建与远程分支相同的分支 
+30.git branch --set-upstream branch-name origin/branch-name	链接本地分支和远程分支
 
 建立远程库
 1.创立SSH KEY 
@@ -42,3 +47,17 @@ ssh-keygen -t rsa -C "youremail@example.com"
 6.git push origin master 之后的推送
 
 克隆远程库
+1.git clone 地址
+
+
+多人协作工作模式g
+：：：：：
+1.首先，可以试图用git push origin <branch-name>推送自己的修改；
+
+2.如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
+
+3.如果合并有冲突，则解决冲突，并在本地提交；
+
+4.没有冲突或者解决掉冲突后，再用git push origin <branch-name>推送就能成功！
+
+5.如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to <branch-name> origin/<branch-name>。
